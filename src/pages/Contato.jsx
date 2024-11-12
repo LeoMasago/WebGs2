@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from 'react-bootstrap/Button'
 
 export default function Contato() {
 
@@ -16,13 +17,13 @@ export default function Contato() {
     }
 
     return (
-        <div className="flex justify-center">
-            <form onSubmit={handleSubmit} className="flex flex-col w-2/4">
+        <div className="container">
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome:</label>
                 <input
                     type="text"
                     id="nome"
-                    className="text-black"
+                    className="textLabel"
                     value={nome}
                     onChange={e => setNome(e.target.value)}
                 />
@@ -30,7 +31,7 @@ export default function Contato() {
                 <input
                     type="email"
                     id="email"
-                    className="text-black"
+                    className="textLabel"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
@@ -39,12 +40,13 @@ export default function Contato() {
                     id="mensagem"
                     cols="30"
                     rows="10"
-                    className="text-black"
+                    className="textLabel"
                     value={mensagem}
                     onChange={e => setMensagem(e.target.value)}
                 >
                 </textarea>
-                <button type="submit" className="bg-purple-900 mt-5 text-white p-2 rounded-md">Enviar</button>
+                <button type="submit" className="btnEnviar">Enviar</button>
+                <Button variant="primary">Primary</Button>
             </form>
         </div>
     )

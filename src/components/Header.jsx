@@ -4,7 +4,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="bg-purple-800 flex text-white justify-around h-14 items-center">
+            <header>
                 <div>
                     <h1 className="font-bold">Nome do Site</h1>
                 </div>

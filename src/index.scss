@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//variáveis
+$bgHtml: #EEEEEE;
+$header: #222831;
+$btnEnviarColor: purple;
+
+//globais que aparecem uma só vez ou em todas as telas
+html{
+    background-color: $bgHtml;
+}
+
+header{
+    background-color: $header;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    height: 3.5rem;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+//estilo para coisas específicas 
+.active{
+  border-bottom: 2px solid white;
+}
+
+.btnEnviar{
+    margin-top: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: $btnEnviarColor;
+    color: white
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.textLabel{
+    color: black;
+}
+
+.carrossel{
+    width: 100%;
+}
+
