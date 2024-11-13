@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Button from 'react-bootstrap/Button'
 
 export default function Contato() {
 
@@ -46,7 +45,6 @@ export default function Contato() {
                 >
                 </textarea>
                 <button type="submit" className="btnEnviar">Enviar</button>
-                <Button variant="primary">Primary</Button>
             </form>
         </div>
     )
