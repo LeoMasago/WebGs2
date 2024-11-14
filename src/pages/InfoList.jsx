@@ -1,47 +1,37 @@
-import { useEffect, useState } from "react"
-import TextCard from "../components/TextCard"
-import  text  from "../data/text.json";
+import { useState, useEffect } from 'react';
 
+export default function MovieListPage() {
+    const [empresa, setEmpresa] = useState([]); // Estado para armazenar os filmes
 
-export default function InfoList() {
-
-    const [search, setSearch] = useState("")
-    const [infos, setInfos] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
-
-
-    const handleSearch = (event) => {
-        setSearch(event.target.value)
-        console.log(search)
-    }
-
-    const text = infos.filter(infos => infos.title.toLowerCase().includes(search.toLowerCase()))
+    useEffect(() => {
+        fetch('https://6735116d5995834c8a91cd8b.mockapi.io/cidades', {
+            method: 'GET',
+            headers: { 'content-type': 'application/json' },
+        })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            }
+            throw new Error('Erro ao buscar empresa');
+        })
+        .then(data => {
+            setEmpresa(data); // Define os filmes no estado
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }, []);
 
     return (
         <>
-            <h2>Busque informações</h2>
-            <input
-                className="text-black"
-                type="text"
-                id="search"
-                value={search}
-                onChange={handleSearch}
-            />
+            <h2>Veja o nome das empresas parceiras</h2>
             <section className="flex flex-wrap justify-between gap-4">
-                {
-                    isLoading ? <p>Carregando...</p> :
-
-                        text.length > 0 ?
-
-                            text
-                                .map(infos => (
-                                    <TextCard key={infos.id} {...infos} />
-                                ))
-                            :
-                            <p> Informação não encontrada</p>
-                }
+                {empresa.map(empresa => (
+                    <div key={empresa.id} className="">
+                        <h3>{empresa.cidade}</h3>
+                    </div>
+                ))}
             </section>
         </>
-    )
+    );
 }
-

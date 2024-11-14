@@ -9,7 +9,12 @@ export default function Contato() {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Seu nome é ${nome}, seu e-mail é ${email} a mensagem é ${mensagem}`)
-
+        let nome1 = document.getElementById("nome").value
+        localStorage.setItem("UserName", nome1)
+        let email1 = document.getElementById("email").value
+        localStorage.setItem("email", email1)
+        let mensagem1 = document.getElementById("mensagem").value
+        localStorage.setItem("mensagem", mensagem1)
         setNome('')
         setEmail('')
         setMensagem('')
