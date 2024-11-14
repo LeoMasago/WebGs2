@@ -45,6 +45,65 @@ form{
     justify-content: center;
 }
 
+.containerHeader{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav{
+    gap: 2rem;
+    display: none;
+}
+
+.btnNav{
+    transition-duration: 300ms;
+}
+
+.btnNav:hover{
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.menuBar{
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.linksMenu{
+    transition-duration: 300ms;
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.linksMenu:hover{
+    text-decoration-line: underline;
+    --tw-scale-x: 1.07;
+    --tw-scale-y: 1.07;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+    .btnNav{
+        display: none;
+    }
+    .menuBar{
+        display: none;
+    }
+}
+
 .textLabel{
     color: black;
 }
