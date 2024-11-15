@@ -6,9 +6,11 @@
 $bgHtml: #EEEEEE;
 $header: #222831;
 $btnEnviarColor: purple;
+$bgContactForm: #00ADB5;
+$inputColor:#D9D9D9;
 
 //globais que aparecem uma só vez ou em todas as telas
-html{
+body{
     background-color: $bgHtml;
 }
 
@@ -19,6 +21,14 @@ header{
     justify-content: space-around;
     height: 3.5rem;
     align-items: center;
+}
+
+footer{
+    background-color: $header;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin: 0px;
 }
 
 form{
@@ -45,11 +55,25 @@ form{
     justify-content: center;
 }
 
+.formContainer{
+    border-radius: 0.25rem;
+    background-color: $bgContactForm;
+}
+
+.contactForm{
+    margin-top: 2%;
+    gap: 30px;
+}
+
 .containerHeader{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-around;
+}
+
+.containerFooter{
+    width: 100%;
 }
 
 .nav{
@@ -102,10 +126,14 @@ form{
     .menuBar{
         display: none;
     }
+    .container{
+        width: 50%;
+    }
 }
 
 .textLabel{
     color: black;
+    background-color: $inputColor;
 }
 
 .carrossel{

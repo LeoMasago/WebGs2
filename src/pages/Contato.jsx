@@ -21,27 +21,27 @@ export default function Contato() {
     }
 
     return (
-        <div className="container">
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="nome">Nome:</label>
+        <div className="container formContainer">
+            <form onSubmit={handleSubmit} className="contactForm">
                 <input
                     type="text"
+                    placeholder="Nome"
                     id="nome"
                     className="textLabel"
                     value={nome}
                     onChange={e => setNome(e.target.value)}
                 />
-                <label htmlFor="email">Email:</label>
                 <input
                     type="email"
+                    placeholder="Email"
                     id="email"
                     className="textLabel"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <label htmlFor="mensagem">Mensagem:</label>
                 <textarea
                     id="mensagem"
+                    placeholder="Mensagem"
                     cols="30"
                     rows="10"
                     className="textLabel"

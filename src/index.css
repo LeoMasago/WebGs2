@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
+body {
   background-color: #EEEEEE;
 }
 
@@ -12,6 +12,14 @@ header {
   justify-content: space-around;
   height: 3.5rem;
   align-items: center;
+}
+
+footer {
+  background-color: #222831;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin: 0px;
 }
 
 form {
@@ -37,11 +45,25 @@ form {
   justify-content: center;
 }
 
+.formContainer {
+  border-radius: 0.25rem;
+  background-color: #00ADB5;
+}
+
+.contactForm {
+  margin-top: 2%;
+  gap: 30px;
+}
+
 .containerHeader {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-around;
+}
+
+.containerFooter {
+  width: 100%;
 }
 
 .nav {
@@ -94,9 +116,13 @@ form {
   .menuBar {
     display: none;
   }
+  .container {
+    width: 50%;
+  }
 }
 .textLabel {
   color: black;
+  background-color: #D9D9D9;
 }
 
 .carrossel {

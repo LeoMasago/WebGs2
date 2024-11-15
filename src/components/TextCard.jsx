@@ -6,7 +6,6 @@ export default function TextCard({ id, descricao, imagem}) {
         <Card>
             <Card.Img src={{imagem}} />
             <Card.Text>{descricao}</Card.Text>
-            <Link to={`/informacoes/${id}`}>Saber mais</Link>
         </Card>
     )
 
