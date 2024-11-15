@@ -8,6 +8,7 @@ $header: #222831;
 $btnEnviarColor: purple;
 $bgContactForm: #00ADB5;
 $inputColor:#D9D9D9;
+$github:#a5a5a5;
 
 //globais que aparecem uma só vez ou em todas as telas
 body{
@@ -47,12 +48,22 @@ form{
     padding: 0.5rem;
     border-radius: 0.375rem;
     background-color: $btnEnviarColor;
-    color: white
+    color: white;
 }
 
 .container{
     display: flex;
     justify-content: center;
+}
+
+.card{
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.cardImage{
+    width: 10%;
 }
 
 .formContainer{
@@ -76,9 +87,32 @@ form{
     width: 100%;
 }
 
+.containerSobre{
+    margin: 20px;
+}
+
 .nav{
     gap: 2rem;
     display: none;
+}
+
+.divFooter{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.github{
+    color: $github;
+
 }
 
 .btnNav{
@@ -116,6 +150,34 @@ form{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.titulos{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.txt{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.textLabel{
+    color: black;
+    background-color: $inputColor;
+    border-radius: 3px;
+}
+
+.searchInfo{
+    margin: 20px;
+    border-radius: 5px;
+    width: 50%;
+    height: 40px;
+}
+
+.carrossel{
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .nav {
         display: flex;
@@ -129,14 +191,10 @@ form{
     .container{
         width: 50%;
     }
+    .searchInfo{
+        width: 20%;
+    }
 }
 
-.textLabel{
-    color: black;
-    background-color: $inputColor;
-}
 
-.carrossel{
-    width: 100%;
-}
 

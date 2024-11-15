@@ -20,7 +20,7 @@ export default function Home() {
                 </Carousel.Item>
             </Carousel>
 
-            <CardContainer titulo="Populares">
+            <CardContainer>
                 {
                     text
                         .map(infos => (

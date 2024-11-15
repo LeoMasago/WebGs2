@@ -1,10 +1,7 @@
-export default function CardContainer({ titulo, children }) {
+export default function CardContainer({children }) {
     return (
-        <div>
-            <h1>{titulo}</h1>
-            <div className="container">
-                {children}
-            </div>
+        <div className="card">
+            {children}
         </div>
     )
 }
