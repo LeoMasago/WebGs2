@@ -12,7 +12,7 @@ export default function Header() {
             <header>
                 <div className="containerHeader">
                     <div>
-                        <h1 className="font-bold">Nome do Site</h1>
+                        <h1 className="font-bold">Green Hydrogen</h1>
                     </div>
                     <nav className="">
                         <ul className="nav">
