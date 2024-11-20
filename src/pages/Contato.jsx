@@ -9,6 +9,7 @@ export default function Contato() {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Seu nome é ${nome}, seu e-mail é ${email} a mensagem é ${mensagem}`)
+        //Pegado o valor do input e armazenando no localStorage
         let nome1 = document.getElementById("nome").value
         localStorage.setItem("UserName", nome1)
         let email1 = document.getElementById("email").value

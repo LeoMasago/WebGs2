@@ -15,6 +15,7 @@ export default function Header() {
                         <h1 className="font-bold">Green Hydrogen</h1>
                     </div>
                     <nav className="">
+                        {/* navbar com site no pc e em tablet */}
                         <ul className="nav">
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/parceria">Parcerias</NavLink></li>
@@ -30,7 +31,7 @@ export default function Header() {
                     </button>
                 </div>
             </header>
-
+            {/* navbar com site mobile */}
             <div id="menu" className="menuBar">
                 <div className="menu">
                     <a className="linksMenu">
